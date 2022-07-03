@@ -1,0 +1,96 @@
+*{
+    /* zerando o CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Estilizando barras de rolagem no Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(230, 111, 32) rgba(255, 119, 0, 0.6);
+}
+/* Imagem de fundo */
+body{
+    background: url(../imagens/bg_fundo1.jpg) no-repeat fixed;
+    -webkit-background-size:cover;
+    background-size: cover;
+}
+/* Estilizando barras de rolagem no Chrome, Edge e Safari */
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+body::-webkit-scrollbar-track {
+    background: rgba(241, 153, 59, 0.846);        
+} 
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(230, 111, 32);    
+    border-radius: 20px;       
+    border: 3px solid rgb(255, 119, 0);  
+}
+.card_img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 25px;
+    border-radius: 15px;
+    box-shadow: 2px 20px 25px rgba(0, 0, 0, 0.7); 
+}
+._img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all linear .4s;
+}
+._img:hover{
+    filter: grayscale(80%);
+    transform: scale(1.1);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#modal_img{
+    width: 65vw;
+    transform: scale(0);
+    transition: all linear .3s;
+    border-radius: 15px;
+}
+.modal_active #modal_img{
+    transform: scale(1);
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: visibility .8s linear, opacity 0.5s linear;
+}
+.modal_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#btn_close{
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px 10px;
+    font-size: 25px;
+    border: solid 1px rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all ease-out .4s;
+    border-radius: 5px;
+}
+#btn_close:hover{
+   background-color: gray; 
+}
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+}
