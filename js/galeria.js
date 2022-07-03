@@ -6,11 +6,11 @@ let btnClosed = document.querySelector('#btn_close');
 let srcVal = ""
 
 // evento de clique, para capturar o src da imagem
-for(let i =0; i<imagens.length;i++){
-    imagens[i].addEventListener('click',function(){
+for(let e =0; e<imagens.length;e++){
+    imagens[e].addEventListener('click',function(){
         
         // capturar o src
-        srcVal = imagens[i].getAttribute('src')
+        srcVal = imagens[e].getAttribute('src')
         modalImg.setAttribute('src',srcVal);
         // monstrar o modal com a imagem
         modal.classList.toggle('modal_active');
