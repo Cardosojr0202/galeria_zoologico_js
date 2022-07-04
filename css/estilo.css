@@ -25,6 +25,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;       
     border: 3px solid rgb(255, 119, 0);  
 }
+/* Card imag */
 .card_img{
     width: 300px;
     height: 300px;
